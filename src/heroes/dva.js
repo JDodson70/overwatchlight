@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './dva.css';
 
 class Dva extends Component {
   render() {

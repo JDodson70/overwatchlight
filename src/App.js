@@ -4,7 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import Dva from './heroes/dva';
-import Ben from './ben';
+import Tracer from './heroes/tracer';
 
 const Home = () => (
   <div>
@@ -79,7 +79,7 @@ class App extends Component {
               <Link to="/heroes">DVA</Link>
             </li>
             <li>
-              <Link to="/ben/">ben</Link>
+              <Link to="/tracer">Tracer</Link>
             </li>
           </ul>
 
@@ -89,7 +89,7 @@ class App extends Component {
           <Route path="/about" component={About} />
           <Route path="/topics" component={Topics} />
           <Route path="/heroes" component={Dva} />
-          <Route path="/ben" component={Ben} />
+          <Route path="/tracer" component={Tracer} />
         </div>
       </Router>
     );
