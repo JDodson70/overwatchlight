@@ -84,12 +84,13 @@ class App extends Component {
           </ul>
 
           <hr />
-
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/topics" component={Topics} />
-          <Route path="/heroes" component={Dva} />
-          <Route path="/tracer" component={Tracer} />
+          <div className="l-page">
+            <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/topics" component={Topics} />
+            <Route path="/heroes" component={Dva} />
+            <Route path="/tracer" component={Tracer} />
+          </div>
         </div>
       </Router>
     );

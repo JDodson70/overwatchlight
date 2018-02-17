@@ -42,3 +42,12 @@ ul li {
 ul li a {
   color:  #FFF;
 }
+
+
+/* Layouts */
+
+.l-page {
+  display: flex;
+  max-width: 1400px;
+  margin: auto;
+}
