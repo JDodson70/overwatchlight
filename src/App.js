@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import Dva from './heroes/dva';
+import Ben from './ben';
+
 const Home = () => (
   <div>
     <h2>Home</h2>
@@ -72,6 +75,12 @@ class App extends Component {
             <li>
               <Link to="/topics">Topics</Link>
             </li>
+            <li>
+              <Link to="/heroes">DVA</Link>
+            </li>
+            <li>
+              <Link to="/ben/">ben</Link>
+            </li>
           </ul>
 
           <hr />
@@ -79,6 +88,8 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/topics" component={Topics} />
+          <Route path="/heroes" component={Dva} />
+          <Route path="/ben" component={Ben} />
         </div>
       </Router>
     );
