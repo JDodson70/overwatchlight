@@ -18,35 +18,81 @@ const About = () => (
   </div>
 );
 
-const Topics = ({ match }) => (
-  <div>
-    <h2>Topics</h2>
-    <ul>
-      <li>
-        <Link to={`${match.url}/rendering`}>Rendering with React</Link>
-      </li>
-      <li>
-        <Link to={`${match.url}/components`}>Components</Link>
-      </li>
-      <li>
-        <Link to={`${match.url}/props-v-state`}>Props v. State</Link>
-      </li>
-    </ul>
 
-    <Route path={`${match.url}/:topicId`} component={Topic} />
-    <Route
-      exact
-      path={match.url}
-      render={() => <h3>Please select a topic.</h3>}
-    />
+const Heroes  = ({ match }) => (
+  <div className="c-heroes">
+    <div className="c-heroesList__col">
+      <ul className="c-heroesList">
+        <li>
+          <Link to={`${match.url}/tracer`}>Tracer</Link>
+        </li>
+        <li>
+          <Link to={`${match.url}/dva`}>Dva</Link>
+        </li>
+        <li>
+          <Link to={`${match.url}/doomfist`}>Doomfist</Link>
+        </li>
+        <li>
+          <Link to={`${match.url}/genji`}>Genji</Link>
+        </li>
+        <li>
+          <Link to={`${match.url}/mcree`}>Mcree</Link>
+        </li>
+        <li>
+          <Link to={`${match.url}/pharah`}>Pharah</Link>
+        </li>
+        <li>
+          <Link to={`${match.url}/reaper`}>Reaper</Link>
+        </li>
+        <li>
+          <Link to={`${match.url}/soldier`}>Soldier: 76</Link>
+        </li>
+        <li>
+          <Link to={`${match.url}/tracer`}>Sombra</Link>
+        </li>
+        <li>
+          <Link to={`${match.url}/tracer`}>Tracer</Link>
+        </li>
+        <li>
+          <Link to={`${match.url}/tracer`}>Bastion</Link>
+        </li>
+        <li>
+          <Link to={`${match.url}/tracer`}>Hnazo</Link>
+        </li>
+        <li>
+          <Link to={`${match.url}/tracer`}>Junkrat</Link>
+        </li>
+        <li>
+          <Link to={`${match.url}/tracer`}>MEI</Link>
+        </li>
+      </ul>
+    </div>
+
+    <div className="c-heroesList__col">
+      {/*<Route path={`${match.url}/:heroId`} component={Hero} />      */}
+
+      <Route path={`${match.url}/tracer`} component={Tracer} />
+      <Route path={`${match.url}/dva`} component={Dva} />
+
+      <Route
+        exact
+        path={match.url}
+        render={() => <h3>Please select a topic.</h3>}
+      />
+    </div>
+  </div>
+)
+
+const Hero = ({ match }) => (
+  <div>
+    <h3>{match.params.heroId}</h3>
+
+    <Route path={`${match.url}/tracer`} component={Tracer} />
+    <Route path={`${match.url}/dva`} component={Dva} />
+
   </div>
 );
 
-const Topic = ({ match }) => (
-  <div>
-    <h3>{match.params.topicId}</h3>
-  </div>
-);
 
 
 class App extends Component {
@@ -58,14 +104,9 @@ class App extends Component {
           <div className="App">
             <header className="App-header">
               <img src={logo} className="App-logo" alt="logo" />
-              <h1 className="App-title">Welcome to React</h1>
-              <h1 className="App-title">Hello World!</h1>
             </header>
-            <p className="App-intro">
-              To get started, edit <code>src/App.js</code> and save to reload.
-            </p>
           </div>
-          <ul>
+          <ul className="navigation">
             <li>
               <Link to="/">Home</Link>
             </li>
@@ -73,23 +114,14 @@ class App extends Component {
               <Link to="/about">About</Link>
             </li>
             <li>
-              <Link to="/topics">Topics</Link>
-            </li>
-            <li>
-              <Link to="/heroes">DVA</Link>
-            </li>
-            <li>
-              <Link to="/tracer">Tracer</Link>
+              <Link to="/heroes">Heroes</Link>
             </li>
           </ul>
 
-          <hr />
           <div className="l-page">
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
-            <Route path="/topics" component={Topics} />
-            <Route path="/heroes" component={Dva} />
-            <Route path="/tracer" component={Tracer} />
+            <Route path="/heroes" component={Heroes} />
           </div>
         </div>
       </Router>

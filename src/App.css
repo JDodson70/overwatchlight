@@ -1,53 +1,79 @@
+a {
+  text-decoration: none;
+}
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  height: 125px;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+  background-color: #000;
+  padding: 50px;
   color: white;
+  font-size: 100px;
+  line-height: 100px;
+  vertical-align: top;
 }
 
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-
-ul {
-  background-color: #999;
+ */
+.navigation {
+  margin: 0;
+  background-color: #218ffe;
   padding: 25px;
   text-align: center;
 }
 
-ul li {
-  margin: 0 25px;
+.navigation li {
+  margin: 0 50px;
   list-style-type: none;
   display: inline-block;
 }
 
-ul li a {
+.navigation li a {
   color:  #FFF;
+  text-decoration: none;
+  font-weight: bold;
 }
 
+.c-heroes {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.c-heroesList__col {
+  max-width: 50%;
+}
+
+.c-heroesList {
+  margin: 0;
+  padding: 25px 50px;
+  background-color: #218ffe;
+  color: #FFF;
+}
+
+.c-heroesList li {
+  list-style-type: none;
+  padding: 5px 0;
+}
+
+.c-heroesList a {
+  font-family: 'Open Sans', sans-serif;
+  color: #FFF;
+}
 
 /* Layouts */
 
 .l-page {
   display: flex;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: auto;
 }
