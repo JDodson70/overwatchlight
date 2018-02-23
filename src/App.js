@@ -3,8 +3,30 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import Dva from './heroes/dva';
-import Tracer from './heroes/tracer';
+
+
+
+
+//TANK
+import Dva from './heroes/tank/dva';
+import Reinhardt from './heroes/tank/reinhardt';
+import Orsa from './heroes/tank/orsa';
+import Roadhog from './heroes/tank/roadhog';
+import Winston from './heroes/tank/winston';
+import Zarya from './heroes/tank/zarya';
+
+//SUPPORT
+import Ana from   './heroes/support/ana';
+import Lúcio from './heroes/support/lúcio';
+import Mercy from './heroes/support/mercy';
+import Moira from './heroes/support/moira';
+import Symmetra from './heroes/support/symmetra';
+import Zenyatta  from './heroes/support/zenyatta';
+
+
+
+
+
 
 const Home = () => (
   <div>
@@ -29,6 +51,40 @@ const Heroes  = ({ match }) => (
         <li>
           <Link to={`${match.url}/dva`}>Dva</Link>
         </li>
+      <li>
+        <Link to={`${match.url}/orsa`}>Orsa</Link>
+      </li>
+      <li>
+        <Link to={`${match.url}/roadhog`}>Roadhog</Link>
+    </li>
+    <li>
+        <Link to={`${match.url}/reinhardt`}>Reinhardt</Link>
+    </li>
+      <li>
+        <Link to={`${match.url}/winston`}>Winston</Link>
+      </li>
+      <li>
+        <Link to={`${match.url}/zarya`}>Zarya</Link>
+      </li>
+    <li>
+      <Link to={`${match.url}/ana`}>Ana</Link>
+    </li>
+      <li>
+          <Link to={`${match.url}/lúcio`}>Lúcio</Link>
+        </li>
+        <li>
+          <Link to={`${match.url}/mercy`}>Mercy</Link>
+        </li>
+        <li>
+          <Link to={`${match.url}/moira`}>Moira</Link>
+        </li>
+      <li>
+        <Link to={`${match.url}/symmetra`}>Symmetra</Link>
+    </li>
+    <li>
+      <Link to={`${match.url}/zenyatta`}>Zenyatta</Link>
+    </li>
+
         <li>
           <Link to={`${match.url}/doomfist`}>Doomfist</Link>
         </li>
@@ -71,8 +127,17 @@ const Heroes  = ({ match }) => (
     <div className="c-heroesList__col">
       {/*<Route path={`${match.url}/:heroId`} component={Hero} />      */}
 
-      <Route path={`${match.url}/tracer`} component={Tracer} />
+
       <Route path={`${match.url}/dva`} component={Dva} />
+      <Route path={`${match.url}/reinhardt`} component={Reinhardt}/>
+      <Route path={`${match.url}/orsa`} component={Orsa}/>
+      <Route path={`${match.url}/winston`} component={Winston}/>
+      <Route path={`${match.url}/zarya`} component={Zarya}/>
+      <Route path={`${match.url}/ana`} component={Ana}/>
+      <Route path={`${match.url}/mercy`} component={Mercy}/>
+      <Route path={`${match.url}/moira`} component={Moira}/>
+      <Route path={`${match.url}/symmetra`} component={Symmetra}/>
+      <Route path={`${match.url}/zenyatta`} component={Zenyatta}/>
 
       <Route
         exact
@@ -87,8 +152,17 @@ const Hero = ({ match }) => (
   <div>
     <h3>{match.params.heroId}</h3>
 
-    <Route path={`${match.url}/tracer`} component={Tracer} />
+
     <Route path={`${match.url}/dva`} component={Dva} />
+    <Route path={`${match.url}/reinhardt`} component={Reinhardt}/>
+    <Route path={`${match.url}/orsa`} component={Orsa}/>
+    <Route path={`${match.url}/winston`} component={Winston}/>
+    <Route path={`${match.url}/zarya`} component={Zarya}/>
+    <Route path={`${match.url}/ana`} component={Ana}/>
+    <Route path={`${match.url}/mercy`} component={Mercy}/>
+    <Route path={`${match.url}/moira`} component={Moira}/>
+    <Route path={`${match.url}/symmetra`} component={Symmetra}/>
+    <Route path={`${match.url}/zenyatta`} component={Zenyatta}/>
 
   </div>
 );
