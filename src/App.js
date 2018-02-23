@@ -101,7 +101,7 @@ const Heroes  = ({ match }) => (
     <div className="c-heroesList__col">
       <div className="c-heroes__content">
           {/*<Route path={`${match.url}/:heroId`} component={Hero} />      */}
-          {/*<Route path={`${match.url}/dva`} component={Dva} />*/}*/}
+          
 
       {/*Offense*/}
       <Route path={`${match.url}/doomfist`} component={Doomfist} />
