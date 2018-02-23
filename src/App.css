@@ -43,20 +43,71 @@ a {
   font-weight: bold;
 }
 
+.c-homeBox  {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 400px;
+  width: 100%;
+  margin-top: 25px;
+  background-position: center;
+  background-size: cover;
+}
+
+.c-homeBox:before {
+  content: "";
+  position: absolute;
+  top:  0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: background 0.4s;
+}
+
+.c-homeBox:hover:before {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.c-homeBox--heroes {
+  background-image: url('./images/overwatch.jpg');
+}
+
+.c-homeBox__title a {
+  position: relative;
+  color:  #FFF;
+  font-size: 3rem;
+}
+
+.c-homeBox__title svg {
+  margin-left: 20px;
+}
+
 .c-heroes {
   display: flex;
   flex-direction: row;
   width: 100%;
 }
 
-.c-heroesList__col {
-  max-width: 50%;
+.c-heroes__col {
+  height: 100%;
+}
+
+.c-heroes__content {
+  margin: 50px 0;
+  padding: 25px 50px;
+  background: linear-gradient(to top, #43484c, #405275);
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  color: #FFF;
 }
 
 .c-heroesList {
-  margin: 0;
+  margin: 50px;
   padding: 25px 50px;
-  background-color: #218ffe;
+  background: linear-gradient(to top, #43484c, #405275);
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
   color: #FFF;
 }
 
@@ -76,4 +127,8 @@ a {
   display: flex;
   max-width: 1200px;
   margin: auto;
+}
+
+.l-full {
+  width: 100%;
 }
