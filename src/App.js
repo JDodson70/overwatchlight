@@ -37,12 +37,6 @@ const Home = () => (
   </div>
 );
 
-const About = () => (
-  <div>
-    <h2>About</h2>
-  </div>
-);
-
 const Heroes  = ({ match }) => (
   <div className="c-heroes">
     <div className="c-heroes__col">
@@ -109,7 +103,6 @@ const Hero = ({ match }) => (
 );
 
 
-
 class App extends Component {
 
   render() {
@@ -126,16 +119,12 @@ class App extends Component {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
               <Link to="/heroes">Heroes</Link>
             </li>
           </ul>
 
           <div className="l-page">
             <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
             <Route path="/heroes" component={Heroes} />
           </div>
         </div>
