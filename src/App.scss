@@ -88,20 +88,20 @@ a {
 .c-heroes {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
+  &__col {
+    width: 50%;
+  }
+  &__content {
+    margin: 50px 0;
+    padding: 25px 50px;
+    background: linear-gradient(to top, #43484c, #405275);
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    color: #FFF;
+  }
 }
 
-.c-heroes__col {
-  height: 100%;
-}
-
-.c-heroes__content {
-  margin: 50px 0;
-  padding: 25px 50px;
-  background: linear-gradient(to top, #43484c, #405275);
-  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-  color: #FFF;
-}
 
 .c-heroesList {
   margin: 50px;

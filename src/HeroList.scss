@@ -1,8 +1,36 @@
-.c-HeroList {
+.c-heroList {
+	display: flex;
+	flex-direction: row;
+	height: 400px;
+	background: #ececec;
+	&__thumbCol {
+		width: 200px;
+		padding: 50px;
+		background-color: #000;
+	}
+	&__content {
+		width: calc(100% - 200px);
+		background-position: right;
+		background-size: cover;
+		opacity: 0;
+		transition: opacity 0.4s;
+		&.is-active {
+			opacity: 1;
+		}
+		&__caption {
+			color: #FFF;
+			h2 {
+				font-size: 4rem;
+				font-family: 'Open Sans';
+				text-transform: italic;
+			}
+		}
+	}
 	&__thumb {
-		max-height: 60px;
-		border: 2px solid orange;
+		max-height: 80px;
+		background: #525d9b;
 		padding: 10px;
 		border-radius: 50%;
+		transition: border 0.2s, background 0.2s;
 	}
 }

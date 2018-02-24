@@ -42,13 +42,7 @@ const Home = () => (
 const Heroes  = ({ match }) => (
   <div className="c-heroes">
 
-    <div className="c-heroes__col">
       <HeroList />
-    </div>
-
-    <div className="c-heroes__col">
-      <HeroList />
-    </div>
 
     <div className="c-heroes__col">
       <ul className="c-heroesList">
