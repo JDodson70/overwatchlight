@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import React, { Component } from 'react';
+import { HeroList } from './HeroList';
+
 import logo from './logo.svg';
 import './App.css';
 
@@ -39,6 +41,15 @@ const Home = () => (
 
 const Heroes  = ({ match }) => (
   <div className="c-heroes">
+
+    <div className="c-heroes__col">
+      <HeroList />
+    </div>
+
+    <div className="c-heroes__col">
+      <HeroList />
+    </div>
+
     <div className="c-heroes__col">
       <ul className="c-heroesList">
         <li><Link to={`${match.url}/tracer`}>Tracer</Link></li>
