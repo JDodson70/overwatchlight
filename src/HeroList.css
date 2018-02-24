@@ -1,0 +1,29 @@
+.c-heroList {
+  display: flex;
+  flex-direction: row;
+  height: 400px;
+  background: #ececec; }
+  .c-heroList__thumbCol {
+    width: 200px;
+    padding: 50px;
+    background-color: #000; }
+  .c-heroList__content {
+    width: calc(100% - 200px);
+    background-position: right;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 0.4s; }
+    .c-heroList__content.is-active {
+      opacity: 1; }
+    .c-heroList__content__caption {
+      color: #FFF; }
+      .c-heroList__content__caption h2 {
+        font-size: 4rem;
+        font-family: 'Open Sans';
+        text-transform: italic; }
+  .c-heroList__thumb {
+    max-height: 80px;
+    background: #525d9b;
+    padding: 10px;
+    border-radius: 50%;
+    transition: border 0.2s, background 0.2s; }
